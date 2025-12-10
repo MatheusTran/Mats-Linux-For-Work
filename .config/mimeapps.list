@@ -1,0 +1,8 @@
+[Added Associations]
+application/pdf=firefox-2.desktop;
+video/mp4=mpv.desktop;
+
+[Default Applications]
+application/pdf=firefox-2.desktop;
+inode/directory=org.kde.dolphin.desktop
+video/mp4=mpv.desktop;

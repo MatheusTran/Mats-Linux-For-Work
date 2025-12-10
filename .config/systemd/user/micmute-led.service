@@ -1,0 +1,9 @@
+[Unit]
+Description=Sync Mic Mute LED with PipeWire
+
+[Service]
+ExecStart=/usr/local/bin/micmute-led-sync.sh
+Restart=always
+
+[Install]
+WantedBy=default.target
