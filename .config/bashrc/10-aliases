@@ -1,0 +1,122 @@
+# -----------------------------------------------------
+# ALIASES
+# -----------------------------------------------------
+
+# -----------------------------------------------------
+# General
+# -----------------------------------------------------
+alias nano="sudo nano"
+alias pacman="sudo pacman"
+
+alias cd="z"
+alias cp="cpg -g"
+alias mv="mvg -g"
+alias cls='clear'
+alias nf='fastfetch'
+alias ff='fastfetch --config examples/13'
+alias ls='eza -a --icons=always --hyperlink'
+alias ll='eza -al --icons=always --hyperlink'
+alias lt='eza -a --tree --level=2 --icons=always --hyperlink'
+alias grep="grep --color=auto"
+alias es="fd -H --hyperlink"
+alias shutdown='systemctl poweroff'
+alias drun='rofi -show drun'
+
+alias mp3="yt-dlp --cookies-from-browser firefox --retries 3 -t sleep --sleep-interval 10 --max-sleep-interval 15 --embed-thumbnail -x --audio-format mp3 --audio-quality 0 --color auto-tty"
+alias mp4="yt-dlp --cookies-from-browser firefox --retries 3 -t sleep --sleep-interval 10 --max-sleep-interval 15 --embed-thumbnail --extractor-args \"youtube:player-client=default,-tv_simply\" -f \"bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best\""
+alias qr='qrencode -m 2 -t utf8 <<< "$1"'
+alias pin="pip install --break-system-packages"
+alias weather="curl -s 'wttr.in'"
+
+alias ef="kitten hyperlinked-grep"
+alias kdiff="kitten diff"
+alias clipboard="kitten clipboard"
+alias img="kitten icat"
+
+alias battheme='bat --list-themes | fzf --preview="bat --theme={} --color=always /home/mat/Apps/light/LED_lib.py"'
+
+alias clog="bat --paging=never -l log -p"
+
+alias bathelp='bat --plain --language=help'
+help() {
+    "$@" --help 2>&1 | bathelp
+}
+
+=() { printf "%s\n" "$@" | bc -l; }
+
+clip() {
+    echo -n $@ | clipboard
+}
+
+mkcd() { 
+    mkdir -p $1 && cd $1 
+} 
+
+ii() {
+    dolphin $@ >/dev/null 2>&1 &
+}
+
+pacdate() {
+  pacman -Qi |
+  grep '^\(Name\|Install Date\)\s*:' |
+  cut -d ':' -f 2- |
+  paste - - |
+  while read pkg_name install_date
+  do
+  install_date=$(date --date="$install_date" -Iseconds)   
+  echo "$install_date   $pkg_name"
+  done | sort
+}
+
+rcache() {
+    pacman -Qdtq | sudo pacman -Rns -
+    pacman -Qqd | sudo pacman -Rsu -
+    yay -Scc --noconfirm
+    sudo paccache -rk0
+}
+
+ascii() {
+    figlet -f smslant "$1" | clipboard
+    echo copied "$1" to clipboard
+}
+
+
+# -----------------------------------------------------
+# Window Managers
+# -----------------------------------------------------
+
+alias Qtile='startx'
+# Hyprland with Hyprland
+
+# -----------------------------------------------------
+# Git
+# -----------------------------------------------------
+alias gs="git status"
+alias ga="git add"
+alias gc="git commit -m"
+alias gp="git push"
+alias gpl="git pull"
+alias gst="git stash"
+alias gsp="git stash; git pull"
+alias gfo="git fetch origin"
+alias gcheck="git checkout"
+alias gcredential="git config credential.helper store"
+
+# -----------------------------------------------------
+# Scripts
+# -----------------------------------------------------
+
+
+# -----------------------------------------------------
+# System
+# -----------------------------------------------------
+alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+
+# -----------------------------------------------------
+# Qtile
+# -----------------------------------------------------
+alias res1='xrandr --output DisplayPort-0 --mode 2560x1440 --rate 120'
+alias res2='xrandr --output DisplayPort-0 --mode 1920x1080 --rate 120'
+alias setkb='setxkbmap de;echo "Keyboard set back to de."'
+
+

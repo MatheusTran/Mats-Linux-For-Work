@@ -1,0 +1,1 @@
+$(cat ~/.config/assets/settings/terminal.sh) --class dotfiles-floating -e nmtui

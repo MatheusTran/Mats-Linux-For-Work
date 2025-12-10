@@ -1,0 +1,59 @@
+{
+    "layer": "top",
+    "margin-top": 0,
+    "margin-bottom": 0,
+    "margin-left": 0,
+    "margin-right": 0,    
+    "spacing": 0,
+
+    "hyprland/workspaces": {
+        "format": "{} {windows}",
+        "window-rewrite-default": "\udb84\udcf7",
+        "window-rewrite": {
+            "title<.*youtube.*>": "",
+            "class<firefox>": "",
+            "class<firefox> title<.*github.*>": "",
+            "kitty": "",
+            "code": "󰨞",
+            "dolphin": "",
+            "discord": "\uf1ff ",
+            "whatsapp": "\uf232",
+            "matlab": "\ue82a",
+            "kicad": " \uec19",
+            "blender": "\ue766",
+            "obs": "\uf03d",
+            "shotcut": "\udb84\udec6",
+            "heynote": "\udb80\udcec",
+            "vlc": "\udb81\udd7c"
+        },
+        // "persistent-workspaces": {
+        //     "*": 1
+        // }
+    },
+
+    "include": [
+        "~/.config/assets/settings/waybar-quicklinks.json",
+        "~/.config/waybar/modules.json"
+    ],
+
+    "modules-left": [
+        "custom/exit",
+        "clock",
+        "hyprland/workspaces",
+        "group/quicklinks"
+    ],
+
+    "modules-center": [
+        "hyprland/window"
+    ],
+
+    "modules-right": [
+        "custom/updates",
+        "backlight",
+        "pulseaudio",
+        "bluetooth",
+        "network",
+        "battery", 
+        "custom/notification"
+    ]
+}

@@ -1,0 +1,2 @@
+# dolphin
+kitty -e spf

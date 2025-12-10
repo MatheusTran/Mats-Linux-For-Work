@@ -1,0 +1,84 @@
+# Custom
+# Theme create by: https://github.com/AnshumanNeon
+# Update by(sort by time):
+# 
+# Thanks for all contributor!!
+
+# If you want to make sidebar border display just set it same as sidebar background color
+# $background = rgb(#0B0C21)
+# $foreground = rgb(#f0c6cd)
+# $color0 = rgb(#0B0C21)
+# $color1 = rgb(#215493)
+# $color2 = rgb(#5B619F)
+# $color3 = rgb(#9F74AA)
+# $color4 = rgb(#D37DA8)
+# $color5 = rgb(#638BC2)
+# $color6 = rgb(#F58BA7)
+# $color7 = rgb(#f0c6cd)
+# $color8 = rgb(#a88a8f)
+# $color9 = rgb(#215493)
+# $color10 = rgb(#5B619F)
+# $color11 = rgb(#9F74AA)
+# $color12 = rgb(#D37DA8)
+# $color13 = rgb(#638BC2)
+# $color14 = rgb(#F58BA7)
+# $color15 = rgb(#f0c6cd)
+# Code syntax highlight theme (you can go to https://github.com/alecthomas/chroma/blob/master/styles to find one you like)
+code_syntax_highlight = "catppuccin-mocha"
+
+# ========= Border =========
+file_panel_border = "#6c7086"
+sidebar_border = "#1e1e2e"
+footer_border = "#6c7086"
+
+# ========= Border Active =========
+file_panel_border_active = "#F58BA7"
+sidebar_border_active = "#f38ba8"
+footer_border_active = "#a6e3a1"
+modal_border_active = "#5B619F"
+
+# ========= Background (bg) =========
+full_screen_bg = "#0B0C21"
+file_panel_bg = "#0B0C21"
+sidebar_bg = "#0B0C21"
+footer_bg = "#0B0C21"
+modal_bg = "#0B0C21"
+
+# ========= Foreground (fg) =========
+full_screen_fg = "#f0c6cd"
+file_panel_fg = "#f0c6cd"
+sidebar_fg = "#f0c6cd"
+footer_fg = "#f0c6cd"
+modal_fg = "#f0c6cd"
+
+# ========= Special Color =========
+cursor = "#ffffff"
+correct = "#a6e3a1"
+error = "#f38ba8"
+hint = "#73c7ec"
+cancel = "#eba0ac"
+# Gradient color can only have two color!
+gradient_color = ["#89b4fa", "#cba6f7"]
+
+# ========= File Panel Special Items =========
+file_panel_top_directory_icon = "#a6e3a1"
+file_panel_top_path = "#89b5fa"
+file_panel_item_selected_fg = "#98D0FD"
+file_panel_item_selected_bg = "#1e1e2e"
+
+# ========= Sidebar Special Items =========
+sidebar_title = "#74c7ec"
+sidebar_item_selected_fg = "#A6DBF7"
+sidebar_item_selected_bg = "#1e1e2e"
+sidebar_divider = "#868686"
+
+# ========= Modal Special Items =========
+modal_cancel_fg = "#383838"
+modal_cancel_bg = "#eba0ac"
+
+modal_confirm_fg = "#383838"
+modal_confirm_bg = "#89dceb"
+
+# ========= Help Menu =========
+help_menu_hotkey = "#89dceb"
+help_menu_title = "#eba0ac"
